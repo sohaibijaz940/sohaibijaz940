@@ -1,0 +1,67 @@
+name: Refresh profile activity artwork
+on:
+  schedule:
+    - cron: '17 2 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/profile-artwork.yml'
+      - 'scripts/**'
+permissions:
+  contents: read
+concurrency:
+  group: profile-artwork
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify streak calculations
+        run: python -m unittest discover -s scripts -p 'test_*.py'
+      - name: Render actual activity and static calendars
+        run: python scripts/activity.py
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Generate themed contribution snakes
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # verified v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            generated/snake-dark.svg?palette=github-dark&color_snake=%23d5f477&color_dots=%23202b20,%23465b30,%23708e43,%23a0bd59,%23d5f477
+            generated/snake-light.svg?palette=github-light&color_snake=%234c6731&color_dots=%23e2e7d8,%23c6d5a6,%239fbf78,%23739c4e,%234c6731
+      - uses: actions/upload-artifact@v4
+        with:
+          name: profile-generated
+          path: generated/
+          retention-days: 3
+  publish:
+    needs: generate
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: profile-generated
+          path: generated/
+      - name: Publish generated artwork only
+        run: |
+          git pull --ff-only
+          mkdir -p assets/generated
+          cp generated/* assets/generated/
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- assets/generated/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Refresh actual profile activity artwork [skip ci]'
+          git push
