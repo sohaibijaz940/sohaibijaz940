@@ -13,7 +13,7 @@
 
 I turn small, working ideas into software you can inspect—and explain the decisions underneath.
 
-[Portfolio source & setup](https://github.com/sohaibijaz940/sohaib-engineering-portfolio) · [Engineering writing](https://github.com/sohaibijaz940/sohaib-engineering-portfolio/tree/main/src/content/writing) · [LinkedIn](https://www.linkedin.com/in/sohaibijaz) · [Email](mailto:sohaibijaz1234@gmail.com)
+[Live portfolio](https://sohaibijaz.dev) · [Source & setup](https://github.com/sohaibijaz940/sohaib-engineering-portfolio) · [Engineering writing](https://sohaibijaz.dev/writing/) · [LinkedIn](https://www.linkedin.com/in/sohaibijaz) · [Email](mailto:sohaibijaz1234@gmail.com)
 
 </div>
 
@@ -24,30 +24,30 @@ I turn small, working ideas into software you can inspect—and explain the deci
 
 ## Selected builds
 
-Four different problems. A shared approach: make the data, rules and assumptions visible. Each card opens the modern source; the original coursework and its history remain linked from the project repositories.
+Four different problems. A shared approach: make the data, rules and assumptions visible. Each card opens the live demo; the original coursework and its history remain linked from the project repositories.
 
 <div align="center">
 
-<a href="https://github.com/sohaibijaz940/sohaib-engineering-portfolio/tree/main/trustmart-app">
+<a href="https://trustmart.sohaibijaz.dev/">
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/project-trustmart-light.png">
   <img src="assets/project-trustmart-dark.png" alt="TrustMart — supplier records, comparable sample prices and product disclosures" width="410">
 </picture>
 </a>
-<a href="https://github.com/sohaibijaz940/sohaib-engineering-portfolio/tree/main/src/app/demos/travel">
+<a href="https://sohaibijaz.dev/demos/travel/">
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/project-travel-light.png">
   <img src="assets/project-travel-dark.png" alt="Travel Estimator — explained budgets and private group planning" width="410">
 </picture>
 </a>
 
-<a href="https://github.com/sohaibijaz940/sohaib-engineering-portfolio/tree/main/src/app/demos/careindex">
+<a href="https://sohaibijaz.dev/demos/careindex/tour/">
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/project-careindex-light.png">
   <img src="assets/project-careindex-dark.png" alt="CareIndex — synthetic clinic workflows and transactional booking" width="410">
 </picture>
 </a>
-<a href="https://github.com/sohaibijaz940/sohaib-engineering-portfolio/tree/main/src/app/demos/word-search">
+<a href="https://sohaibijaz.dev/demos/word-search/">
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/project-word-search-light.png">
   <img src="assets/project-word-search-dark.png" alt="Word Search Studio — seeded puzzles and visible search" width="410">
@@ -71,12 +71,12 @@ My current foundation is software engineering, algorithms and databases. Machine
 
 I document more than the finished screen. The portfolio includes six illustrated walkthroughs, with working teaching examples and four short English explainers with captions and transcripts.
 
-- [TrustMart: which prices should count?](https://github.com/sohaibijaz940/sohaib-engineering-portfolio/blob/main/src/content/writing/trustmart.mdx)
-- [Travel: what does a quote actually replace?](https://github.com/sohaibijaz940/sohaib-engineering-portfolio/blob/main/src/content/writing/travel.mdx)
-- [CareIndex: two requests, one appointment.](https://github.com/sohaibijaz940/sohaib-engineering-portfolio/blob/main/src/content/writing/careindex.mdx)
-- [Word Search: a puzzle should be possible to finish.](https://github.com/sohaibijaz940/sohaib-engineering-portfolio/blob/main/src/content/writing/word-search.mdx)
+- [TrustMart: which prices should count?](https://sohaibijaz.dev/writing/trustmart-from-scanner-to-market-companion/)
+- [Travel: what does a quote actually replace?](https://sohaibijaz.dev/writing/travel-estimator-live-quotes-explained/)
+- [CareIndex: two requests, one appointment.](https://sohaibijaz.dev/writing/careindex-booking-conflicts-and-transactions/)
+- [Word Search: a puzzle should be possible to finish.](https://sohaibijaz.dev/writing/word-search-solvable-seeded-puzzles/)
 
-[Browse all writing source](https://github.com/sohaibijaz940/sohaib-engineering-portfolio/tree/main/src/content/writing) · [Certificates & issuer information](https://github.com/sohaibijaz940/sohaib-engineering-portfolio/tree/main/public/certificates) · [![Portfolio build and engine checks](https://github.com/sohaibijaz940/sohaib-engineering-portfolio/actions/workflows/verify.yml/badge.svg)](https://github.com/sohaibijaz940/sohaib-engineering-portfolio/actions/workflows/verify.yml)
+[Browse all writing](https://sohaibijaz.dev/writing/) · [Certificates & issuer information](https://sohaibijaz.dev/#certificates) · [![Portfolio build and engine checks](https://github.com/sohaibijaz940/sohaib-engineering-portfolio/actions/workflows/verify.yml/badge.svg)](https://github.com/sohaibijaz940/sohaib-engineering-portfolio/actions/workflows/verify.yml)
 
 ## The work, over time
 
@@ -102,4 +102,4 @@ These are actual GitHub calendar values for the last twelve months, refreshed da
 
 [Let's talk](mailto:sohaibijaz1234@gmail.com) · [Explore the source](https://github.com/sohaibijaz940/sohaib-engineering-portfolio)
 
-<sub>The portfolio demos are currently available through local setup. Public hosting is being prepared; source links above are not presented as hosted applications.</sub>
+<sub>The portfolio and four demos are live at sohaibijaz.dev. Shops, clinic records and hotel examples are fictional; provider responses and sample assumptions remain labelled. No real payments or clinical services.</sub>
